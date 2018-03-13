@@ -2,7 +2,7 @@
 
 Build the image using `docker build -t repository/tag:version .`
 
-The superset version is defined at the top of the Dockerfile and installed using pip.
+The [Superset](https://github.com/apache/incubator-superset) version is defined at the top of the Dockerfile and installed using pip.
 
 Default username and password is admin, admin. This is defined on line 6 of `superset/superset-init`.
 
