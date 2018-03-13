@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -e
+
+# Create an admin user
+fabmanager create-admin --app superset --username admin --firstname admin --lastname user --email admin@fab.org --password admin 
+
+# Initialize the database
+superset db upgrade
+
+superset load_examples
+
+# Create default roles and permissions
+superset init
+
+superset runserver
